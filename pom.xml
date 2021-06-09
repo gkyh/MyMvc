@@ -8,7 +8,7 @@
   <name>MyMvc Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-  		<jettyVersion>9.0.2.v20130417</jettyVersion>
+  		<jettyVersion>9.3.27.v20190418</jettyVersion>
     		<servlet.api.version>3.0.1</servlet.api.version>
      	 <java.version>1.8</java.version>
    </properties>
