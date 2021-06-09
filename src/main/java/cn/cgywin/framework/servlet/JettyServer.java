@@ -16,16 +16,17 @@ import org.eclipse.jetty.servlet.ServletHolder;
 public class JettyServer {
 
 	private void start() throws Exception {
-		
-        int port = 8088;
-        
+
+        int port = 6666;
+
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
-        
+
         DisptcherServlet dh=new DisptcherServlet();
         context.addServlet(new ServletHolder(dh), "/*");
-       // port = dh.getPort();          
-        
+        dh.InitConfig();
+        port = dh.getPort();
+
         Server server = new Server(port);
         server.setHandler(context);
         //ServletHolder sh = new ServletHolder(DisptcherServlet.class);
